@@ -1,13 +1,36 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/today/index",
+    "pages/form/index",
+    "pages/mine/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "AccioLumos",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "assets/Category.png",
+        "selectedIconPath": "assets/Category.png",
+        "pagePath": "pages/today/index"
+      },
+      {
+        "iconPath": "assets/edit.png",
+        "selectedIconPath": "assets/edit.png",
+        "pagePath": "pages/form/index"
+      },
+      {
+        "iconPath": "assets/home.png",
+        "selectedIconPath": "assets/home.png",
+        "pagePath": "pages/mine/index"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

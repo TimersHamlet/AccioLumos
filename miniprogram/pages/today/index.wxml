@@ -1,0 +1,25 @@
+<!--miniprogram/pages/today/index.wxml-->
+<view class="page-container">
+	<view class="title">
+		<image class="title-img" src="../../assets/Document.png" />
+		<text class = "title-label">账本</text>
+	</view>
+	<view class="main-content-box">
+		<view class = "item-box">
+      <image class="item-box__img" src="../../assets/daily.png" />
+      <text class = "item-box__label">日常</text>
+		</view>
+		<view class = "item-box">
+      <image class="item-box__img" src="../../assets/house.png" />
+      <text class = "item-box__label">装修</text>
+		</view>
+		<view class = "item-box">
+      <image class="item-box__img" src="../../assets/travel.png" />
+      <text class = "item-box__label">旅行</text>
+		</view>
+    <view class = "add-box">
+      <image class="add-box__img" src="../../assets/Add.png" />
+		</view>
+	</view>
+
+</view>
