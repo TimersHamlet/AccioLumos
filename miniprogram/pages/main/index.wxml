@@ -1,8 +1,13 @@
 <!-- miniprogram/pages/main/index.wxml -->
 <view class="page">
-  <view class="top-container">
+  <view class="top-container" animation="{{topAnimation}}">
+    <view class="top-line__left" animation="{{lineAnimation}}"></view>
     <view class="add-button" bind:tap="onAddButtonTap" animation="{{addButton.animation}}">
       <image src="../../assets/main-page-icon/plusIcon.svg" style="width:80rpx;height:80rpx" />
     </view>
+    <view class="top-line__right" animation="{{lineAnimation}}"></view>
+  </view>
+  <view class="input-container" animation="{{inputAnimation}}">
+    <text class="input-container___main" style="{{inputContainer.style}}">这里是记账的内容</text>
   </view>
 </view>

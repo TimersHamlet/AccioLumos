@@ -6,10 +6,15 @@ Page({
    */
   data: {
     addButton: {
-      style: '',
       animation: {},
       status: false
-    }
+    },
+    inputContainer: {
+      style: ''
+    },
+    topAnimation: {},
+    lineAnimation: {},
+    inputAnimation: {}
   },
 
   /**
@@ -58,7 +63,7 @@ Page({
         duration: duration,
         timingFunction: 'ease-in-out'
       });
-      animation.translateY(0).rotate(0).step();
+      animation.rotate(0).step();
       this.setData({
         ['addButton.animation']: animation
       });
@@ -67,9 +72,75 @@ Page({
         duration: duration,
         timingFunction: 'ease-in-out'
       });
-      animation.translateY(-250).rotate(45).step();
+      animation.rotate(45).step();
       this.setData({
         ['addButton.animation']: animation
+      });
+    }
+  },
+
+  topAni(status: boolean, duration: number) {
+    if (status) {
+      const animation = wx.createAnimation({
+        duration: duration,
+        timingFunction: 'ease-in-out'
+      });
+      animation.translateY(0).step();
+      this.setData({
+        topAnimation: animation.export()
+      });
+    } else {
+      const animation = wx.createAnimation({
+        duration: duration,
+        timingFunction: 'ease-in-out'
+      });
+      animation.translateY(-250).step();
+      this.setData({
+        topAnimation: animation
+      });
+    }
+  },
+
+  lineAni(status: boolean, duration: number) {
+    if (status) {
+      const animation = wx.createAnimation({
+        duration: duration,
+        timingFunction: 'ease-in-out'
+      });
+      animation.width(0).step();
+      this.setData({
+        lineAnimation: animation
+      });
+    } else {
+      const animation = wx.createAnimation({
+        duration: duration,
+        timingFunction: 'ease-in-out'
+      });
+      animation.width('260rpx').step();
+      this.setData({
+        lineAnimation: animation
+      });
+    }
+  },
+
+  inputAni(status: boolean, duration: number) {
+    if (status) {
+      const animation = wx.createAnimation({
+        duration: duration,
+        timingFunction: 'ease-in-out'
+      });
+      animation.height(0).step().width(0).step();
+      this.setData({
+        inputAnimation: animation
+      });
+    } else {
+      const animation = wx.createAnimation({
+        duration: duration,
+        timingFunction: 'ease-in-out'
+      });
+      animation.width('710rpx').step().height('960rpx').step();
+      this.setData({
+        inputAnimation: animation
       });
     }
   },
@@ -77,8 +148,16 @@ Page({
   onAddButtonTap() {
     const { addButton } = this.data;
     this.addButtonAni(addButton.status, 400);
+    this.topAni(addButton.status, 400);
+    this.lineAni(addButton.status, 400);
+    this.inputAni(addButton.status, 400);
     this.setData({
       ['addButton.status']: !addButton.status
+    });
+    this.setData({
+      ['inputContainer.style']: addButton.status
+        ? 'display:block'
+        : 'display:none'
     });
   }
 });

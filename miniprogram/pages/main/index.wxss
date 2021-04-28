@@ -8,11 +8,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  flex-direction: column;
 }
 .top-container{
   display: flex;
   justify-content: center;
   width: inherit;
+  position: absolute;
+  align-items: center;
+  flex: 1;
 }
 .add-button{
   width: 150rpx;
@@ -24,4 +29,25 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+}
+.input-container{
+  height: 0;
+  width: 0;
+  border-left: 4rpx solid #aaa;
+  border-right: 4rpx solid #aaa;
+  line-height: 960rpx;
+  text-align: center;
+}
+.input-container___main{
+  display: none;
+}
+
+.top-line__left,.top-line__right{
+  height: 4rpx;
+  width: 0;
+  margin: 0 20rpx 0 20rpx;
+  background: linear-gradient(to left,#B22222,#FF4500)
+}
+.top-line__right{
+  background: linear-gradient(to right,#B22222,#FF4500)
 }
