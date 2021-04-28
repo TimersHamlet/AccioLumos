@@ -14,10 +14,11 @@
   justify-content: center;
   width: inherit;
 }
-.add-icon{
+.add-button{
   width: 150rpx;
   height: 150rpx;
   background-color: silver;
   border: 1rpx solid #000;
   border-radius: 150rpx;
+  position: relative;
 }

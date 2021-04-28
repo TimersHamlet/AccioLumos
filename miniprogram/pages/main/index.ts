@@ -1,13 +1,23 @@
+const app = getApp<IAppOption>();
+
 Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    addButtonStyle: ''
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {},
+  onLoad: function () {
+    const distance =
+      (app.globalData.globalHeight?.navigationBarHeightRpx || 0) / 2;
+    this.setData({
+      addButtonStyle: `bottom: ${distance}rpx`
+    });
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -37,5 +47,7 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {}
+  onReachBottom: function () {},
+
+  onAddButtonTap() {}
 });

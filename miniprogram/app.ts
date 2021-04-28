@@ -29,6 +29,7 @@ App<IAppOption>({
       screenHeightRpx: scrHeight * rpxRate
     };
     this.globalData.globalHeight = heightObject;
+    console.log('=====================>', this.globalData.globalHeight);
 
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || [];
