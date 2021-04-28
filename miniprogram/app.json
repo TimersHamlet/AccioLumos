@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/main/index",
     "pages/today/index",
     "pages/form/index",
-    "pages/mine/index",
-    "pages/main/index"
-  ],
+    "pages/mine/index"
+   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
