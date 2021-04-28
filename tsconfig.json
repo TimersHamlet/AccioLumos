@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "strictNullChecks": true,
     "noImplicitAny": true,
     "module": "CommonJS",
@@ -21,7 +22,13 @@
     "lib": ["es5"],
     "typeRoots": [
       "./typings"
-    ]
+    ],
+    "paths": {
+      "@/*":["miniprogram/*"],
+      "@assets/*":["miniprogram/assets/*"],
+      "@utils/*":["miniprogram/utils/*"],
+      "@pages/*":["miniprogram/pages/*"],
+    }
   },
   "include": [
     "./**/*.ts"
