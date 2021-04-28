@@ -2,7 +2,8 @@
   "pages": [
     "pages/today/index",
     "pages/form/index",
-    "pages/mine/index"
+    "pages/mine/index",
+    "pages/main/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

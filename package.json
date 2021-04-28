@@ -5,7 +5,8 @@
   "scripts": {
     "compile": "./node_modules/typescript/bin/tsc",
     "tsc": "node ./node_modules/typescript/lib/tsc.js",
-    "commit": "node ./node_modules/cz-customizable/standalone.js"
+    "commit": "node ./node_modules/cz-customizable/standalone.js",
+    "build":"npm run tsc"
   },
   "keywords": [],
   "author": "",
