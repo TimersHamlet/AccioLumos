@@ -1,6 +1,6 @@
 <!-- miniprogram/pages/main/index.wxml -->
 <view class="page">
   <view class="top-container">
-    <view class="add-button" style="{{addButtonStyle}}" bind:tap="onAddButtonTap"></view>
+    <view class="add-button" style="{{addButton.style}}" bind:tap="onAddButtonTap" animation="{{addButton.animation}}"></view>
   </view>
 </view>
