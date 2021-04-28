@@ -15,13 +15,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-    const distance =
-      (app.globalData.globalHeight?.navigationBarHeightRpx || 0) / 2;
-    this.setData({
-      ['addButton.style']: `bottom: ${distance}rpx`
-    });
-  },
+  onLoad: function () {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -56,23 +50,24 @@ Page({
   /**
    * 控制添加按钮移动的动画方法
    * @param status 按钮当前的状态
+   * @param duration 按钮动画时间，单位：毫秒
    */
-  addButtonAni(status: boolean) {
+  addButtonAni(status: boolean, duration: number) {
     if (status) {
       const animation = wx.createAnimation({
-        duration: 500,
+        duration: duration,
         timingFunction: 'ease-in-out'
       });
-      animation.translateY(0).step();
+      animation.translateY(0).rotate(0).step();
       this.setData({
         ['addButton.animation']: animation
       });
     } else {
       const animation = wx.createAnimation({
-        duration: 500,
+        duration: duration,
         timingFunction: 'ease-in-out'
       });
-      animation.translateY(-200).step();
+      animation.translateY(-250).rotate(45).step();
       this.setData({
         ['addButton.animation']: animation
       });
@@ -81,7 +76,7 @@ Page({
 
   onAddButtonTap() {
     const { addButton } = this.data;
-    this.addButtonAni(addButton.status);
+    this.addButtonAni(addButton.status, 400);
     this.setData({
       ['addButton.status']: !addButton.status
     });

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "rootDir": "miniprogram",
     "strictNullChecks": true,
     "noImplicitAny": true,
     "module": "CommonJS",

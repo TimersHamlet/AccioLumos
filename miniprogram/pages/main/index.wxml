@@ -1,6 +1,8 @@
 <!-- miniprogram/pages/main/index.wxml -->
 <view class="page">
   <view class="top-container">
-    <view class="add-button" style="{{addButton.style}}" bind:tap="onAddButtonTap" animation="{{addButton.animation}}"></view>
+    <view class="add-button" bind:tap="onAddButtonTap" animation="{{addButton.animation}}">
+      <image src="../../assets/main-page-icon/plusIcon.svg" style="width:80rpx;height:80rpx" />
+    </view>
   </view>
 </view>

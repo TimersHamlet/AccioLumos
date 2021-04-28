@@ -4,12 +4,13 @@
     "pages/today/index",
     "pages/form/index",
     "pages/mine/index"
-   ],
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "AccioLumos",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#a9b7b7",
