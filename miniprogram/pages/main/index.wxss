@@ -43,15 +43,24 @@
   align-items: center;
 }
 .input-item{
-  width: 94%;
+  width: 96%;
   display: flex;
   min-height: 90rpx;
   align-items: center;
-  border: 1rpx solid #000;
   margin-bottom: 36rpx;
+  justify-content: space-between;
 }
-.input-item__label{
-  padding-left: 64rpx;
+.input-item__input{
+  caret-color: #1E90FF;
+}
+.little-light__red,.little-light__blue{
+  width: 8rpx;
+  height: 28rpx;
+  background-color: #FF4500;
+  border-radius: 8rpx;
+}
+.little-light__blue{
+  background-color: #1E90FF;
 }
 
 .top-line__left,.top-line__right{

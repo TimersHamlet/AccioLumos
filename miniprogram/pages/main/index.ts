@@ -14,14 +14,53 @@ Page({
     },
     topAnimation: {},
     lineAnimation: {},
-    inputAnimation: {}
+    inputAnimation: {},
+    litteLightAni: {
+      blue: {},
+      red: {}
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {},
+  onLoad: function () {
+    this.littleLightAniFun();
+  },
 
+  littleLightAniFun() {
+    let lightStatus = false;
+    setInterval(() => {
+      if (lightStatus) {
+        const animation = wx.createAnimation({
+          duration: 1100,
+          timingFunction: 'ease-in-out'
+        });
+        animation.backgroundColor('#ffffff').step();
+        this.setData({
+          ['litteLightAni.red']: animation,
+          ['litteLightAni.blue']: animation
+        });
+        lightStatus = !lightStatus;
+      } else {
+        const animationRed = wx.createAnimation({
+          duration: 1100,
+          timingFunction: 'ease-in-out'
+        });
+        animationRed.backgroundColor('#FF4500').step();
+        const animationBlue = wx.createAnimation({
+          duration: 1100,
+          timingFunction: 'ease-in-out'
+        });
+        animationBlue.backgroundColor('#1E90FF').step();
+        this.setData({
+          ['litteLightAni.red']: animationRed,
+          ['litteLightAni.blue']: animationBlue
+        });
+        lightStatus = !lightStatus;
+      }
+    }, 1200);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

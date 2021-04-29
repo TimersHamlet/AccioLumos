@@ -10,19 +10,24 @@
   <view class="input-container" animation="{{inputAnimation}}">
     <view class="input-main" style="{{inputContainer.style}}">
       <view class="input-item">
-        <text class="input-item__label">收入or支出</text>
+        <view class="little-light__red" animation="{{litteLightAni.red}}"></view>
+        <text class="input-item__label">收入or支出：</text>
+        <view class="little-light__blue" animation="{{litteLightAni.blue}}"></view>
       </view>
       <view class="input-item">
-        <text class="input-item__label">金额</text>
+        <view class="little-light__blue" animation="{{litteLightAni.blue}}"></view>
+        <text class="input-item__label">金额：</text>
+        <input class="input-item__input" type="digit" maxlength="10" />
+        <view class="little-light__red" animation="{{litteLightAni.red}}"></view>
       </view>
       <view class="input-item">
-        <text class="input-item__label">来源</text>
+        <text class="input-item__label">来源：</text>
       </view>
       <view class="input-item">
-        <text class="input-item__label">类别</text>
+        <text class="input-item__label">类别：</text>
       </view>
       <view class="input-item">
-        <text class="input-item__label">备注</text>
+        <text class="input-item__label">备注：</text>
       </view>
     </view>
   </view>
