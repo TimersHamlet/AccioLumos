@@ -18,7 +18,11 @@ Page({
     litteLightAni: {
       blue: {},
       red: {}
-    }
+    },
+    items: [
+      { value: 'USA', name: '收入', color: '#1E90FF' },
+      { value: 'CHN', name: '支出', checked: 'true', color: '#FF4500' }
+    ]
   },
 
   /**

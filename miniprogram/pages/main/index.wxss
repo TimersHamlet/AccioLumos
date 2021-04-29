@@ -51,6 +51,7 @@
   justify-content: space-between;
 }
 .input-item__input{
+  border-bottom: 1px solid #aaa;
   caret-color: #1E90FF;
 }
 .little-light__red,.little-light__blue{
@@ -62,6 +63,15 @@
 .little-light__blue{
   background-color: #1E90FF;
 }
+.input-item-content{
+  width: inherit;
+  display: flex;
+  align-items: center;
+}
+  
+.input-item__label{
+  padding-left: 24rpx;
+}
 
 .top-line__left,.top-line__right{
   height: 4rpx;
@@ -71,4 +81,7 @@
 }
 .top-line__right{
   background: linear-gradient(to right,#B22222,#FF4500)
+}
+.radio{
+  padding-left: 24rpx;
 }

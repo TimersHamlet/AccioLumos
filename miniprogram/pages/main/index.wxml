@@ -11,13 +11,23 @@
     <view class="input-main" style="{{inputContainer.style}}">
       <view class="input-item">
         <view class="little-light__red" animation="{{litteLightAni.red}}"></view>
-        <text class="input-item__label">收入or支出：</text>
+        <view class="input-item-content">
+          <text class="input-item__label">收入or支出：</text>
+          <radio-group bindchange="radioChange">
+            <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+              <radio class="radio" value="{{item.value}}" checked="true" color="{{item.color}}" />
+              <text class="weui-cell__bd">{{item.name}}</text>
+            </label>
+          </radio-group>
+        </view>
         <view class="little-light__blue" animation="{{litteLightAni.blue}}"></view>
       </view>
       <view class="input-item">
         <view class="little-light__blue" animation="{{litteLightAni.blue}}"></view>
-        <text class="input-item__label">金额：</text>
-        <input class="input-item__input" type="digit" maxlength="10" />
+        <view class="input-item-content">
+          <text class="input-item__label">金额：</text>
+          <input class="input-item__input" type="digit" maxlength="15" />
+        </view>
         <view class="little-light__red" animation="{{litteLightAni.red}}"></view>
       </view>
       <view class="input-item">
