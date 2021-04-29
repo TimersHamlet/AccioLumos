@@ -156,7 +156,7 @@ Page({
     });
     this.setData({
       ['inputContainer.style']: addButton.status
-        ? 'display:block'
+        ? 'display:flex'
         : 'display:none'
     });
   }

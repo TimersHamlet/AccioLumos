@@ -8,6 +8,22 @@
     <view class="top-line__right" animation="{{lineAnimation}}"></view>
   </view>
   <view class="input-container" animation="{{inputAnimation}}">
-    <text class="input-container___main" style="{{inputContainer.style}}">这里是记账的内容</text>
+    <view class="input-main" style="{{inputContainer.style}}">
+      <view class="input-item">
+        <text class="input-item__label">收入or支出</text>
+      </view>
+      <view class="input-item">
+        <text class="input-item__label">金额</text>
+      </view>
+      <view class="input-item">
+        <text class="input-item__label">来源</text>
+      </view>
+      <view class="input-item">
+        <text class="input-item__label">类别</text>
+      </view>
+      <view class="input-item">
+        <text class="input-item__label">备注</text>
+      </view>
+    </view>
   </view>
 </view>
