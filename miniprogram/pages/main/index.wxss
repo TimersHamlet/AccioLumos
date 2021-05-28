@@ -1,87 +1,65 @@
 /* miniprogram/pages/main/index.wxss */
+
 .page{
+  --color-background: #f5f5f5;
+  --color-line: #cccccc;
+  --color-weekfont: #dddddd;
   position: fixed;
   top: 0;
   left: 0;
   width: inherit;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  flex-direction: column;
-}
-.top-container{
-  display: flex;
-  justify-content: center;
-  width: inherit;
-  position: absolute;
-  align-items: center;
-  flex: 1;
-}
-.add-button{
-  width: 150rpx;
-  height: 150rpx;
-  background: linear-gradient(to bottom,#1E90FF,#87CEFA);
-  border-radius: 150rpx;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-.input-container{
-  height: 0;
-  width: 0;
-  border-left: 4rpx solid #aaa;
-  border-right: 4rpx solid #aaa;
-}
-.input-main{
-  display: none;
-  margin-top: 100rpx;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  background-color: var(--color-background) ;
 }
-.input-item{
-  width: 96%;
+.header{
   display: flex;
-  min-height: 90rpx;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 36rpx;
-  justify-content: space-between;
+  width: 100%;
+  height: 90rpx;
 }
-.input-item__input{
-  border-bottom: 1px solid #aaa;
-  caret-color: #1E90FF;
-}
-.little-light__red,.little-light__blue{
-  width: 8rpx;
-  height: 28rpx;
-  background-color: #FF4500;
-  border-radius: 8rpx;
-}
-.little-light__blue{
-  background-color: #1E90FF;
-}
-.input-item-content{
-  width: inherit;
+.time-container{
   display: flex;
+}
+.time-left-arrow,.time-right-arrow{
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-  
-.input-item__label{
-  padding-left: 24rpx;
+.arrow-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.time-label{
+  line-height: 60rpx;
+  padding: 0 20rpx 0 20rpx ;
 }
 
-.top-line__left,.top-line__right{
-  height: 4rpx;
-  width: 0;
-  margin: 0 20rpx 0 20rpx;
-  background: linear-gradient(to left,#B22222,#FF4500)
+
+.calendar-container{
+  width: 94%;
+  background-color: #ffffff;
+  height: 600rpx;
+  border-radius: 36rpx;
+  display: flex;
+  justify-content: center;
 }
-.top-line__right{
-  background: linear-gradient(to right,#B22222,#FF4500)
+.top-week{
+  display: flex;
+  height: 60rpx;
+  width: 94%;
+  padding: 10rpx 0 10rpx 0;
+  border-bottom: 1rpx solid var(--color-line);
 }
-.radio{
-  padding-left: 24rpx;
+.week-label{
+  flex: 1;
+  text-align: center;
+  line-height: 60rpx;
+  color: var(--color-weekfont);
 }

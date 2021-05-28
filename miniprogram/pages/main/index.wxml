@@ -1,44 +1,21 @@
 <!-- miniprogram/pages/main/index.wxml -->
 <view class="page">
-  <view class="top-container" animation="{{topAnimation}}">
-    <view class="top-line__left" animation="{{lineAnimation}}"></view>
-    <view class="add-button" bind:tap="onAddButtonTap" animation="{{addButton.animation}}">
-      <image src="../../assets/main-page-icon/plusIcon.svg" style="width:80rpx;height:80rpx" />
+  <view class="header">
+    <view class="time-container">
+      <view class="time-left-arrow">
+        <image class="arrow-icon" src="../../assets/main-page-icon/left-arrow.png" />
+      </view>
+      <view class="time-label">2021.05</view>
+      <view class="time-right-arrow">
+        <image class="arrow-icon" src="../../assets/main-page-icon/right-arrow.png" />
+      </view>
     </view>
-    <view class="top-line__right" animation="{{lineAnimation}}"></view>
   </view>
-  <view class="input-container" animation="{{inputAnimation}}">
-    <view class="input-main" style="{{inputContainer.style}}">
-      <view class="input-item">
-        <view class="little-light__red" animation="{{litteLightAni.red}}"></view>
-        <view class="input-item-content">
-          <text class="input-item__label">收入or支出：</text>
-          <radio-group bindchange="radioChange">
-            <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
-              <radio class="radio" value="{{item.value}}" checked="true" color="{{item.color}}" />
-              <text class="weui-cell__bd">{{item.name}}</text>
-            </label>
-          </radio-group>
-        </view>
-        <view class="little-light__blue" animation="{{litteLightAni.blue}}"></view>
-      </view>
-      <view class="input-item">
-        <view class="little-light__blue" animation="{{litteLightAni.blue}}"></view>
-        <view class="input-item-content">
-          <text class="input-item__label">金额：</text>
-          <input class="input-item__input" type="digit" maxlength="15" />
-        </view>
-        <view class="little-light__red" animation="{{litteLightAni.red}}"></view>
-      </view>
-      <view class="input-item">
-        <text class="input-item__label">来源：</text>
-      </view>
-      <view class="input-item">
-        <text class="input-item__label">类别：</text>
-      </view>
-      <view class="input-item">
-        <text class="input-item__label">备注：</text>
-      </view>
+  <view class="calendar-container">
+    <view class="top-week">
+      <block wx:for="{{weekData}}" wx:for-item="item">
+        <view class="week-label">{{item.label}}</view>
+      </block>
     </view>
   </view>
 </view>
