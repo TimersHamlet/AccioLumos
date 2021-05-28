@@ -24,4 +24,13 @@
 .main-calendar{
   width: 94%;
   height: 504rpx;
+  display: flex;
+  flex-flow:wrap row ;
+  padding-top: 10rpx;
+}
+.calendar-item{
+  width: 95rpx;
+  height:100rpx;
+  text-align: center;
+  line-height: 100rpx;
 }

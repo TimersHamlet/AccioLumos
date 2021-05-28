@@ -1,9 +1,13 @@
 <!-- components/calendar/index.wxml -->
 <view class="calendar-container">
   <view class="top-week">
-    <block wx:for="{{weekData}}" wx:for-item="item">
+    <block wx:for="{{weekData}}" wx:for-item="item" wx:key="index">
       <view class="week-label">{{item.label}}</view>
     </block>
   </view>
-  <view class="main-calendar"></view>
+  <view class="main-calendar">
+    <block wx:for="{{dateArr}}" wx:for-item="item" wx:key="index">
+      <view class="calendar-item">{{item}}</view>
+    </block>
+  </view>
 </view>

@@ -22,7 +22,8 @@ Component({
       { label: '五' },
       { label: '六' },
       { label: '日' }
-    ]
+    ],
+    dateArr: [0]
   },
   /**
    * 组件的生命周期
@@ -30,8 +31,9 @@ Component({
   lifetimes: {
     attached: function () {
       const { time } = this.properties;
-      console.log('================>', time);
-      console.log('=====================>', dayjs(time).daysInMonth());
+      this.setData({
+        dateArr: this.getEveryDayArr(time)
+      });
     },
     detached: function () {
       // 在组件实例被从页面节点树移除时执行
@@ -41,5 +43,14 @@ Component({
   /**
    * 组件的方法列表
    */
-  methods: {}
+  methods: {
+    getEveryDayArr: (time: string) => {
+      let curArr: number[] = [];
+      const curDayLength = dayjs(time).daysInMonth();
+      for (let index = 0; index < curDayLength; index++) {
+        curArr.push(index + 1);
+      }
+      return curArr;
+    }
+  }
 });
