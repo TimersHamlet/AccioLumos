@@ -1,5 +1,3 @@
-const app = getApp<IAppOption>();
-
 Page({
   /**
    * 页面的初始数据

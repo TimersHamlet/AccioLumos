@@ -1,9 +1,14 @@
 // components/calendar/index.js
+import * as dayjs from 'dayjs';
+
 Component({
   /**
    * 组件的属性列表
    */
-  properties: {},
+  properties: {
+    /**当前时间 */
+    time: String
+  },
 
   /**
    * 组件的初始数据
@@ -18,6 +23,19 @@ Component({
       { label: '六' },
       { label: '日' }
     ]
+  },
+  /**
+   * 组件的生命周期
+   */
+  lifetimes: {
+    attached: function () {
+      const { time } = this.properties;
+      console.log('================>', time);
+      console.log('=====================>', dayjs(time).daysInMonth());
+    },
+    detached: function () {
+      // 在组件实例被从页面节点树移除时执行
+    }
   },
 
   /**

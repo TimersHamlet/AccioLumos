@@ -29,7 +29,7 @@
       "@assets/*":["miniprogram/assets/*"],
       "@utils/*":["miniprogram/utils/*"],
       "@pages/*":["miniprogram/pages/*"],
-    }
+    },
   },
   "include": [
     "./**/*.ts"
