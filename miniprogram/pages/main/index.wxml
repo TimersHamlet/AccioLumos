@@ -11,11 +11,5 @@
       </view>
     </view>
   </view>
-  <view class="calendar-container">
-    <view class="top-week">
-      <block wx:for="{{weekData}}" wx:for-item="item">
-        <view class="week-label">{{item.label}}</view>
-      </block>
-    </view>
-  </view>
+  <calendar></calendar>
 </view>

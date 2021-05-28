@@ -1,0 +1,27 @@
+/* components/calendar/index.wxss */
+.calendar-container{
+  width: 705rpx;
+  background-color: #ffffff;
+  height: 600rpx;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.top-week{
+  display: flex;
+  height: 60rpx;
+  width: 94%;
+  padding: 10rpx 0 10rpx 0;
+  border-bottom: 1rpx solid var(--color-line);
+}
+.week-label{
+  flex: 1;
+  text-align: center;
+  line-height: 60rpx;
+  color: var(--color-weekfont);
+}
+.main-calendar{
+  width: 94%;
+  height: 504rpx;
+}
