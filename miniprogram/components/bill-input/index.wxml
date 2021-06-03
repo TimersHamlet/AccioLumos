@@ -3,9 +3,9 @@
   <view class="input-container">
     <view class="top-input">
       <view class="choose-type">早餐</view>
-      <view class="amount">0.00</view>
+      <view class="amount">{{amount}}</view>
     </view>
-    <calculator wx:if="{{isShowCalculator}}"></calculator>
+    <calculator wx:if="{{isShowCalculator}}" bind:numTapEvent="updateAmount" bind:clearTapEvent="clearAmount" bind:dotTapEvent="dotInput" bind:backSpaceTapEvent="backSpaceTap"></calculator>
     <block wx:else>
       <view class='type-container'>
         <block wx:for="{{chooseNodeItem.subList}}" wx:for-item="sItem" wx:key="index">

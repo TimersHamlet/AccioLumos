@@ -149,7 +149,8 @@ Component({
         }
       ]
     },
-    isShowCalculator: false
+    isShowCalculator: false,
+    amount: '0.00'
   },
 
   /**
@@ -201,6 +202,56 @@ Component({
       this.setData({
         isShowCalculator: true
       });
+    },
+
+    updateAmount(e) {
+      const { amount } = this.data;
+      if (Number(amount) > 999999999) {
+        wx.showToast({
+          title: '最大金额为999999999',
+          icon: 'none',
+          duration: 1000
+        });
+      } else {
+        if (amount === '0.00') {
+          this.setData({
+            amount: e.detail
+          });
+        } else {
+          let nextAmount = `${amount}${e.detail.toString()}`;
+          this.setData({
+            amount: nextAmount
+          });
+        }
+      }
+    },
+
+    clearAmount() {
+      this.setData({
+        amount: '0.00'
+      });
+    },
+    dotInput(e) {
+      const { amount } = this.data;
+      if (amount.indexOf('.') === -1) {
+        let nextAmount = `${amount}${e.detail.toString()}`;
+        this.setData({
+          amount: nextAmount
+        });
+      }
+    },
+    backSpaceTap() {
+      const { amount } = this.data;
+      if (amount.length === 1 || amount === '0.00') {
+        this.setData({
+          amount: '0.00'
+        });
+      } else {
+        let nextAmount = amount.substring(0, amount.length - 1);
+        this.setData({
+          amount: nextAmount
+        });
+      }
     }
   }
 });
