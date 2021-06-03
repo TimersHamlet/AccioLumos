@@ -2,7 +2,6 @@
 .calendar-container{
   width: 705rpx;
   background-color: #ffffff;
-  height: 600rpx;
   border-radius: 36rpx;
   display: flex;
   align-items: center;
@@ -23,14 +22,17 @@
 }
 .main-calendar{
   width: 94%;
-  height: 504rpx;
+  min-height: 403rpx;
   display: flex;
   flex-flow:wrap row ;
   padding-top: 10rpx;
 }
-.calendar-item{
+.calendar-item__main,.calendar-item__gray{
   width: 95rpx;
   height:100rpx;
   text-align: center;
   line-height: 100rpx;
+}
+.calendar-item__gray{
+  color:#ddd
 }

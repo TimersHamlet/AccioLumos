@@ -2,8 +2,8 @@
 
 .page{
   --color-background: #f5f5f5;
-  --color-line: #cccccc;
-  --color-weekfont: #dddddd;
+  --color-line: #ccc;
+  --color-weekfont: #ccc;
   position: fixed;
   top: 0;
   left: 0;

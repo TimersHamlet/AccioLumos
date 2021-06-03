@@ -30,6 +30,8 @@
       "@utils/*":["miniprogram/utils/*"],
       "@pages/*":["miniprogram/pages/*"],
     },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
   },
   "include": [
     "./**/*.ts"
