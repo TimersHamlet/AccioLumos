@@ -1,1 +1,48 @@
 /* components/calculator/index.wxss */
+.main-container{
+  height: 504rpx;
+  width: 705rpx;
+  display: flex;
+}
+.calculator-num,.calculator-fun{
+  width: 75%;
+  height: 504rpx;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 24rpx;
+}
+.calculator-fun{
+  width: 25%;
+}
+.calculator-num__item,.calculator-fun__item{
+  width: 30%;
+  height: 90rpx;
+  margin:0rpx 6rpx 0rpx 6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator-fun__item{
+  width: 100%;
+}
+.radius,.calculator-fun__label,.calculator-fun__confirm{
+  background-color: #fff;
+  color: #444;
+  text-align: center;
+  line-height: 90rpx;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator-fun__img{
+  width: 60rpx;
+  height: 60rpx;
+}
+.calculator-fun__confirm{
+  background-color: red;
+  color: #fff;
+  font-size: 30rpx;
+}

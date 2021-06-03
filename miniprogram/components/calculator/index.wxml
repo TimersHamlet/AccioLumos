@@ -1,2 +1,33 @@
-<!--components/calculator/index.wxml-->
-<text>components/calculator/index.wxml</text>
+<!-- components/calculator/index.wxml -->
+<view class="main-container">
+  <view class="calculator-num">
+    <view class="calculator-num__item" wx:for="{{Num}}" wx:key="index" data-i="{{item}}">
+      <view class="radius">{{item}}</view>
+    </view>
+    <view class="calculator-num__item">
+      <view class="radius">C</view>
+    </view>
+    <view class="calculator-num__item">
+      <view class="radius">0</view>
+    </view>
+    <view class="calculator-num__item">
+      <view class="radius">.</view>
+    </view>
+  </view>
+  <view class="calculator-fun">
+    <view class="calculator-fun__item">
+      <view class="calculator-fun__label">
+        <image class="calculator-fun__img" src="../../assets/type-icon/clear.png" />
+      </view>
+    </view>
+    <view class="calculator-fun__item">
+      <view class="calculator-fun__label">+</view>
+    </view>
+    <view class="calculator-fun__item">
+      <view class="calculator-fun__label">—</view>
+    </view>
+    <view class="calculator-fun__item">
+      <view class="calculator-fun__confirm">确定</view>
+    </view>
+  </view>
+</view>

@@ -148,7 +148,8 @@ Component({
           iconUrl: ''
         }
       ]
-    }
+    },
+    isShowCalculator: false
   },
 
   /**
@@ -159,6 +160,9 @@ Component({
       this.setScrollWidth();
     },
     detached: function () {
+      this.setData({
+        isShowCalculator: false
+      });
       // 在组件实例被从页面节点树移除时执行
     }
   },
@@ -187,10 +191,16 @@ Component({
       this.setData({
         chooseNodeItem: curItem
       });
-      e.stopPropagation();
     },
+
     onBack() {
       this.triggerEvent('backEvent');
+    },
+
+    subItemClick() {
+      this.setData({
+        isShowCalculator: true
+      });
     }
   }
 });
