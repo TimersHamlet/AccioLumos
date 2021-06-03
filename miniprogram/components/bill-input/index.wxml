@@ -1,24 +1,32 @@
 <!-- components/bill-input/index.wxml -->
-<view class="input-container">
-  <view class="top-input">
-    <view class="choose-type">早餐</view>
-    <view class="amount">0.00</view>
-  </view>
-  <view class='type-container'>
-    <block wx:for="{{chooseNodeItem.subList}}"></block>
-  </view>
-  <view class="footer-container">
-    <scroll-view scroll-x="{{true}}">
-      <view class="scroll-view-x" style="width:{{scrollWidth}}rpx">
-        <block wx:for="{{nodeList}}" wx:for-item="nItem" wx:key="index">
-          <view wx:if="{{chooseNodeItem.index===index}}" class="node-item__choose" data-i="{{index}}" data-code="{{nItem.code}}" bind:tap="nodeItemClick">
-            {{nItem.abbreviation}}
-          </view>
-          <view wx:else class="node-item" data-i="{{index}}" data-code="{{nItem.code}}" bind:tap="nodeItemClick">
-            {{nItem.abbreviation}}
-          </view>
-        </block>
-      </view>
-    </scroll-view>
+<view class="mask-page" bind:tap="onBack">
+  <view class="input-container">
+    <view class="top-input">
+      <view class="choose-type">早餐</view>
+      <view class="amount">0.00</view>
+    </view>
+    <view class='type-container'>
+      <block wx:for="{{chooseNodeItem.subList}}" wx:for-item="sItem" wx:key="index">
+        <view class="sub-Item">
+          <image class="sub-Item__img" wx:if="{{sItem.iconUrl}}" src="{{sItem.iconUrl}}" />
+          <image class="sub-Item__img" wx:else src="../../assets/type-icon/maicai.png" />
+          <view class="sub-Item__label">{{sItem.name}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="footer-container">
+      <scroll-view scroll-x="{{true}}">
+        <view class="scroll-view-x" style="width:{{scrollWidth}}rpx">
+          <block wx:for="{{nodeList}}" wx:for-item="nItem" wx:key="index">
+            <view wx:if="{{chooseNodeItem.index===index}}" class="node-item__choose" data-i="{{index}}" data-code="{{nItem.code}}" catchtap="nodeItemClick">
+              {{nItem.abbreviation}}
+            </view>
+            <view wx:else class="node-item" data-i="{{index}}" data-code="{{nItem.code}}" catchtap="nodeItemClick">
+              {{nItem.abbreviation}}
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
   </view>
 </view>

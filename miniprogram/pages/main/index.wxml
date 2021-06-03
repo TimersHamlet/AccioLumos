@@ -12,5 +12,6 @@
     </view>
   </view>
   <calendar time="2021-05-22"></calendar>
-  <billInput></billInput>
+  <billInput wx:if="{{isShowBillInput}}" bind:backEvent="onCreate"></billInput>
+  <button class="create-bill" bind:tap="onCreate">记一笔</button>
 </view>

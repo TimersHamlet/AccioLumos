@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    time: moment()
+    time: moment(),
+    isShowBillInput: false
   },
 
   /**
@@ -40,5 +41,14 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {}
+  onReachBottom: function () {},
+
+  /**
+   * 按钮点击方法
+   */
+  onCreate() {
+    this.setData({
+      isShowBillInput: !this.data.isShowBillInput
+    });
+  }
 });

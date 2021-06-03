@@ -40,3 +40,13 @@
   line-height: 60rpx;
   padding: 0 20rpx 0 20rpx ;
 }
+.create-bill{
+  height: 72rpx;
+  padding: 0 !important;
+  margin-top: 24rpx;
+  background-color: #fff;
+  border: 4rpx solid #666;
+  border-radius: 36rpx;
+  line-height: 72rpx;
+  z-index: -1 !important;
+}

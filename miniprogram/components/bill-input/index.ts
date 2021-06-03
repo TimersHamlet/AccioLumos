@@ -187,6 +187,10 @@ Component({
       this.setData({
         chooseNodeItem: curItem
       });
+      e.stopPropagation();
+    },
+    onBack() {
+      this.triggerEvent('backEvent');
     }
   }
 });
