@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "calendar": "../../components/calendar"
+    "calendar": "../../components/calendar",
+    "billInput": "../../components/bill-input"
   }
 }
